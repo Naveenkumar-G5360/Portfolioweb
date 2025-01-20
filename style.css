@@ -1,0 +1,370 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body and Global Styles */
+body {
+    background-color: #121212; /* Dark background */
+    color: #fff; /* Light text */
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #ecf0f1; /* Lighter color for headings */
+}
+
+/* Header Section */
+.header {
+    background-color:   #3498db; /* Dark header */
+    color: #ecf0f1;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ecf0f1; /* Light text for title */
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: aliceblue; /* Light grey text for nav */
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover, 
+.navbar ul li a.active {
+    color: yellow; /* Red color for active and hover state */
+}
+
+/* Highlight Effect for All Sections */
+section {
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+section:hover, 
+section:active {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    transform: translateY(-5px); /* Slight lift effect */
+    border-radius: 8px;
+    background-color:#1e1e1e; /* Dark background on hover */
+}
+
+/* Highlight Title for Better Focus */
+section h2 {
+    transition: color 0.3s ease;
+}
+
+section:hover h2, 
+section:active h2 {
+    color: #3498db; /* Blue title hover color */
+}
+
+/* Highlight Effect for Cards */
+.skills-card:hover, 
+.skills-card:active {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    background-color: #1e1e1e; /* Slightly lighter background for cards */
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #1e1e1e; /* Dark background */
+}
+
+.home-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.home-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.home-content h1 {
+    font-size: 2.8rem;
+    color: #3498db; /* Blue title */
+}
+
+.home-content span {
+    color: #e74c3c; /* Red color for emphasis */
+}
+
+.home-content p {
+    font-size: 1rem;
+    margin-top: 15px;
+    color: #bdc3c7; /* Light grey text */
+}
+
+.social-media a {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #bdc3c7; /* Grey social media icons */
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #3498db; /* Blue hover effect */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #3498db; /* Blue button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Highlighted Image Effect */
+.round-image {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 5px solid #3498db;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.round-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #1e1e1e; /* Dark background for about */
+}
+
+.about-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #3498db; /* Blue color for heading */
+}
+
+.about-text {
+    font-size: 1rem;
+    color: #bdc3c7; /* Light text for description */
+    line-height: 1.8;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 50px 20px;
+    background-color: #1e1e1e; /* Dark background */
+}
+
+.skills-section h2, 
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3498db; /* Blue heading color */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.skills-container > div {
+    flex: 1;
+    min-width: 250px;
+}
+
+.skills-container h3 {
+    margin-bottom: 15px;
+    color: #ecf0f1; /* Light heading color */
+}
+
+.skills-container ul {
+    list-style: none;
+}
+
+.skills-container li {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #bdc3c7; /* Grey color for skills list */
+}
+
+.progress-bar {
+    background: #555;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress {
+    background: #3498db;
+    height: 100%;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 50px 20px;
+    background-color: #1e1e1e; /* Dark background */
+}
+
+.project {
+    margin: 20px 0;
+    padding: 20px;
+    background: #1e1e1e; /* Dark grey background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Lift effect */
+}
+
+.project h3 {
+    color: #ecf0f1; /* Light grey text */
+    margin-bottom: 10px;
+}
+
+.technologies {
+    font-style: italic;
+    color: #bdc3c7; /* Light grey for technologies */
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.github-link i {
+    margin-right: 5px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1e1e1e; /* Dark background */
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333; /* Dark background for inputs */
+    color: #fff; /* Light text for inputs */
+}
+
+button[type="submit"] {
+    display: inline-block;
+    background-color: #3498db; /* Blue button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Footer Section */
+.footer {
+    background-color:   #267ab1; /* Dark footer */
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.footer a {
+    color: rgb(7, 22, 2);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+}
